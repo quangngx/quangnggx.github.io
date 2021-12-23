@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nguyen Danh - 1812736</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    //xuat ra man hinh nhap input(alert)
+    var rng = prompt('Enter the range');
+    // xu ly input vua hap (kiem tra input)
+    var res = rng.split("-");
+    if (res.length != 2) {
+    alert("invalid range please input acroding to the format : *-* ");
+    return;
+    }
+     first = parseInt(res[0]);
+    second = parseInt(res[1]);
+    if (first > second) {
+    alert("invalid range the fist number cant be bigger the the second ");
+    return;
+    }
+    //lay du lieu vua thu duoc tinh toan va dua no vao bang 
+    str = "<table border=2><tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+    for (i = first; i <= second; i++) {
+    str = str + "<tr><td>" + i + "<td>" + (i * i) + "<td>" + (i * i * i);
+    }
+    //xuat ra man hinh
+    document.write(str);
+});
+</script>
+<body>
+</body>
+</html>
